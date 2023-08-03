@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.AssemblyInfo.cs
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dzsisharp\task08\bin\Debug\net6.0\task08.exe
+C:\Users\User\Desktop\dzsisharp\task08\bin\Debug\net6.0\task08.deps.json
+C:\Users\User\Desktop\dzsisharp\task08\bin\Debug\net6.0\task08.runtimeconfig.json
+C:\Users\User\Desktop\dzsisharp\task08\bin\Debug\net6.0\task08.dll
+C:\Users\User\Desktop\dzsisharp\task08\bin\Debug\net6.0\task08.pdb
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.dll
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\refint\task08.dll
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.pdb
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\task08.genruntimeconfig.cache
+C:\Users\User\Desktop\dzsisharp\task08\obj\Debug\net6.0\ref\task08.dll
