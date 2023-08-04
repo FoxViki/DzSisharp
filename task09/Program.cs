@@ -7,20 +7,15 @@
 85 -> 8
 
 */
-int number = new Random().Next(10, 100);
+
+int number = new Random().Next(100, 1000);
 Console.WriteLine(number);
 
-int numberOne = number / 10;
+int numberOne = number / 100;
 Console.WriteLine(numberOne);
 
-int numberTwo = number % 10;
-Console.WriteLine(numberTwo);
+int numberThree = number % 10;
+Console.WriteLine(numberThree);
 
-if(numberOne > numberTwo)
-{
-    Console.WriteLine($"наибольшая цифра числа {number} - {numberOne}");
-}
-else
-{
-    Console.WriteLine($"наибольшая цифра числа {number} - {numberTwo}");
-}
+int result = numberOne*10 + numberThree;
+Console.WriteLine(result);
