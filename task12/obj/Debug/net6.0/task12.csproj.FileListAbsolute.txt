@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.AssemblyInfo.cs
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dzsisharp\task12\bin\Debug\net6.0\task12.exe
+C:\Users\User\Desktop\dzsisharp\task12\bin\Debug\net6.0\task12.deps.json
+C:\Users\User\Desktop\dzsisharp\task12\bin\Debug\net6.0\task12.runtimeconfig.json
+C:\Users\User\Desktop\dzsisharp\task12\bin\Debug\net6.0\task12.dll
+C:\Users\User\Desktop\dzsisharp\task12\bin\Debug\net6.0\task12.pdb
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.dll
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\refint\task12.dll
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.pdb
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\task12.genruntimeconfig.cache
+C:\Users\User\Desktop\dzsisharp\task12\obj\Debug\net6.0\ref\task12.dll

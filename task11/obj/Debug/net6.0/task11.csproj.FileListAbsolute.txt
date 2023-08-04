@@ -3,3 +3,13 @@ C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.GeneratedMSBuildE
 C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.AssemblyInfo.cs
 C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\dzsisharp\task11\bin\Debug\net6.0\task11.exe
+C:\Users\User\Desktop\dzsisharp\task11\bin\Debug\net6.0\task11.deps.json
+C:\Users\User\Desktop\dzsisharp\task11\bin\Debug\net6.0\task11.runtimeconfig.json
+C:\Users\User\Desktop\dzsisharp\task11\bin\Debug\net6.0\task11.dll
+C:\Users\User\Desktop\dzsisharp\task11\bin\Debug\net6.0\task11.pdb
+C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.dll
+C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\refint\task11.dll
+C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.pdb
+C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\task11.genruntimeconfig.cache
+C:\Users\User\Desktop\dzsisharp\task11\obj\Debug\net6.0\ref\task11.dll

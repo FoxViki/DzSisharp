@@ -4,4 +4,5 @@
 34, 5 -> некратно, остаток 4
 16, 4 -> кратно
 */
-Consile.WriteLine("Hi");
+
+Console.WriteLine("Привет");
