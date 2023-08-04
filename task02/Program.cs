@@ -8,18 +8,16 @@ Console.WriteLine("Введи первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введи первое число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
-max = 0;
-min = 0;
-if(number1 < number2);
-{
-    max = number2;
-    min = number1;
-}
-else if
-{
-    max = number1;
-    min = number2;
-}
 
-Console.WriteLine($"max");
-Console.WriteLine($"min");
+if (number1 < number2);
+{
+    Console.WriteLine($"max:{number2} $$ min: {number1}");
+}
+else if (number1 == number2)
+{
+    Console.WriteLine("Они равны");
+}
+else if (number1 < number2);
+{
+    Console.WriteLine($"min: {number2} $ max: max: {number1}");
+}
