@@ -6,18 +6,17 @@ a = -9 b = -3 -> max = -3
 */
 Console.WriteLine("Введи первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введи первое число: ");
+Console.WriteLine("Введи второе число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
-
-if (number1 < number2);
+if (number1 > number2)
 {
-    Console.WriteLine($"max:{number2} $$ min: {number1}");
+    Console.WriteLine($" max: {number1} , min: {number2}");
 }
-else if (number1 == number2)
+else if(number1 == number2)
 {
-    Console.WriteLine("Они равны");
+    Console.Write("они равны ");
 }
-else if (number1 < number2);
+else
 {
-    Console.WriteLine($"min: {number2} $ max: max: {number1}");
+Console.WriteLine($"min: {number1} , max: {number2}");
 }
