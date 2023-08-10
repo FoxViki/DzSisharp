@@ -7,6 +7,12 @@
 
 int number = Console.WriteLine("Введи число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-int numberOne = number / 100;
-Console.WriteLine(numberOne);
+if (number >= 100 || number < 1000)
+{
+    int numberOne = number / 100;
+    Console.WriteLine(numberOne);
+}
+else
+{
+    {Console.WriteLine("третьей цифры нет");}
+}
