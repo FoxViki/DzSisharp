@@ -19,3 +19,17 @@ else
 {
     Console.WriteLine($"Число {usernumber} - не кратно {number1} и {number2}");
 }
+
+
+ИЛИ МОЖНО ТАК
+
+Console.WriteLine("Введите число: ");
+int usernumber = Convert.ToInt32(Console.ReadLine());
+if (usernumber % 7 == 0 && usernumber % 23 == 0)
+{
+    Console.WriteLine("Да");
+}
+else 
+{
+    Console.WriteLine("Нет");
+}

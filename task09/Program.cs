@@ -9,14 +9,22 @@
 
 */
 
-int number = new Random().Next(100, 1000);
+
+int number = new Random().Next(10, 100);
 Console.WriteLine(number);
 
-int numberOne = number / 100;
+int numberOne = number / 10;
 Console.WriteLine(numberOne);
 
-int numberThree = number % 10;
-Console.WriteLine(numberThree);
+int numberTwo = number % 10;
+Console.WriteLine(numberTwo);
 
-int result = numberOne*10 + numberThree;
-Console.WriteLine(result);
+if (numberOne > numberTwo)
+{
+    Console.WriteLine($"Наибольшая цифра числа {number} - {numberOne}");
+}
+else
+{
+    Console.WriteLine($"Наибольшая цифра числа {number} - {numberTwo}");
+}
+
