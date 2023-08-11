@@ -5,13 +5,14 @@
 1 -> нет
 */
 
-int number = Console.WriteLine("Введи число: ");
+
+Console.WriteLine("Введи число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number == 6 || number == 7)
 {
     Console.WriteLine("Да");
 }
-else if (number >= 1 || number <= 5)
+else if (number >= 1 && number <= 5)
 {
     Console.WriteLine("Нет");
 }
