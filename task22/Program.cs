@@ -4,7 +4,7 @@
 
 Console.WriteLine("Введи число: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
-for(int i = 0; i <= numberN; i = i + 2)
+for(int i = 0; i <= numberN; i = i + 1)
 {
     int result = i*i;
     Console.Write(result);
