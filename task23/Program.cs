@@ -10,5 +10,5 @@ int numberN = Convert.ToInt32(Console.ReadLine());
 for(int i = 0; i <= numberN; i = i + 1)
 {
     int result = i*i*i;
-    Console.Write(result);
+    Console.Write(result + " ");
 }

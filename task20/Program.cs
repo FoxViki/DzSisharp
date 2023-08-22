@@ -10,7 +10,7 @@ int x2 = Convert.ToInt32(Console.ReadLine());
 int y2 = Convert.ToInt32(Console.ReadLine());
 
 double S = 0;
-S = Math.Sqrt(Math.Pow(x2-x1,2)+Math.pow(y2-y1,2));
+S = Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2));
 Console.Write("Расстояние между точками:" + Math.Round(S,2));
 
 ИЛИ МОЖНО ТАК
