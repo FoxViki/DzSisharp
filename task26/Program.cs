@@ -15,3 +15,4 @@ int Quantity(int number)
     }
     return count;
 };
+Console.WriteLine(Quantity(userNumber));
