@@ -1,7 +1,7 @@
 ﻿/* напишите программу, которая на вход принимает число и выдает сумму цифр от 1 до а.
 */
 
-/*
+
 
 Console.WriteLine("Введи число: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
@@ -15,7 +15,7 @@ Console.WriteLine(sum);
 
 
 
-ИЛИ МОЖНО ТАК */
+/*ИЛИ МОЖНО ТАК */
 
 Console.WriteLine("Введи число: ");
 int userNumber = Convert.ToInt32(Console.ReadLine());
