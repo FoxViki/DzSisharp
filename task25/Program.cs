@@ -7,6 +7,5 @@
 Console.WriteLine("Введи числа: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 int number2 = Convert.ToInt32(Console.ReadLine());
-int result = 0;
-int result = number1^number2;
-Console.WriteLine(result);
+
+Console.WriteLine(Math.Pow(number1, number2));
