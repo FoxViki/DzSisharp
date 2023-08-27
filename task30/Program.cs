@@ -8,7 +8,7 @@ int [] GetRandomArray()
     {
         array[i] = new Random().Next(0,2);
     }
-    eturn array
+    return array
 }
 int[] userArray = GetRandomArray();
 void PrintArray(int[] arrayToPrint)
