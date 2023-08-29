@@ -20,3 +20,4 @@ void PrintArray(int[] arrayToPrint)
     }
     Console.WriteLine("]");
 };
+PrintArray(userArray);
