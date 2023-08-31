@@ -5,38 +5,32 @@
 Console.Write("Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
 
-
-double[] GetArray (int arrayL)
+double[] GetArray(int arrayL)
 {
-double[] array = new double[arrayL];
-for (int i = 0; i < arrayL; i++)
-{
-array[i] = new Random().NextDouble();
-Console.Write($"{array[i]:F2} {" "}");
+    double[] array = new double[arrayL];
+    for (int i = 0; i < arrayL; i++)
+    {
+        array[i] = new Random().NextDouble();
+        Console.Write($"{array[i]:F2} {" "}");
+    }
+    return array;
 }
-return array;
-}
-
-
-
-
 
 double Raz(double[] array)
 {
-double min = array[0];
-double max = array[0];
-int i = 1;
-while (i < array.Length)
-{
-if (max<array[i])
-max = array[i];
-if (min>array[i])
-min = array[i];
-i = i + 1;
+    double min = array[0];
+    double max = array[0];
+    int i = 1;
+    while (i < array.Length)
+    {
+        if (max < array[i])
+            max = array[i];
+        if (min > array[i])
+            min = array[i];
+        i = i + 1;
+    }
+    return max - min;
 }
-return max-min;
-}
-
 
 double[] userArray = GetArray(length);
 
