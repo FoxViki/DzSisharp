@@ -36,7 +36,7 @@ void Print2DArray(int[,] arrayToPrint)
     }
 }
 
-int SumDiaganalArray(int[,] array)
+int SumDiagonalArray(int[,] array)
 {
     int result = 0;
     int cols = array.GetLength(0);
@@ -51,7 +51,7 @@ int SumDiaganalArray(int[,] array)
     return result;
 }
 
-int [,] arr = Get2DArray(10,3,0,10);
+int[,] arr = Get2DArray(10,3,0,10);
 Print2DArray(arr);
 System.Console.WriteLine();
-System.Console.WriteLine(SumDiaganalArray(arr));
+System.Console.WriteLine(SumDiagonalArray(arr));
