@@ -1,4 +1,5 @@
-﻿﻿/* Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+﻿﻿/* Задача 52. Задайте двумерный массив из целых чисел.
+Найдите среднее арифметическое элементов в каждом столбце.
 Например, задан массив:
 1 4 7 2
 5 9 2 3
@@ -23,37 +24,41 @@ int[,] Get2DArray(int rows, int cols, int min, int max)
 
 void Print2DArray(int[,] arrayToPrint)
 {
+    Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
+    {
+        Console.Write($"[{i}]\t");
+    }
+    Console.WriteLine();
     for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
+        Console.Write($"[{i}]\t");
         for (int j = 0; j < arrayToPrint.GetLength(1); j++)
         {
-            System.Console.Write(arrayToPrint[i, j] + "\t");
+            Console.Write(arrayToPrint[i, j] + "\t");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
-void Arithmetic(int[,] array)
+
+
+void SredArifm(int[,] array)
 {
-    int rows = array.GetLength(0);
-    int cols = array.GetLength(1);
-    double sum = 0;
-    for (int col = 0; col < cols; col++)
+    Console.WriteLine();
+    Console.Write("SrAr    ");
+    for (int col = 0; col < array.GetLength(1); col++)
     {
-        System.Console.Write($"------\t");
-    }
-    System.Console.WriteLine();
-    for (int col = 0; col < cols; col++)
-    {
-        for (int row = 0; row < rows; row++)
+        double sum = 0;
+        for (int row = 0; row < array.GetLength(0); row++)
         {
-            sum += array[row, col];
+            sum = sum + array[row, col];
         }
-        System.Console.Write($"{Math.Round(sum / rows, 2)}\t");
-        sum = 0;
+        Console.Write($"{Math.Round(sum / array.GetLength(0), 1)}\t");
     }
 }
 
-int[,] arr = Get2DArray(4, 7, 1, 10);
-Print2DArray(arr);
-Arithmetic(arr);
+int[,] userArray = Get2DArray(3, 5, 0, 10);
+Print2DArray(userArray);
+SredArifm(userArray);
+Console.WriteLine();
