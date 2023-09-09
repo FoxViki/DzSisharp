@@ -6,12 +6,8 @@
 
 Console.Clear();
 
-Console.WriteLine("Введите длину массива: ");
-int arrayL = Convert.ToInt32(Console.ReadLine());
-int [] array = new int [arrayL];
 
-
-int[] ArrayL(int[] array)
+int[] MyArray(int[] array)
 {
     int[] arrayL = new int [array.Length];
     for (int i = 0; i < array.Length; i++)
@@ -42,7 +38,7 @@ int QuantityNumber(int[] array)
     int count = 0;
     for(int i = 0; i < array.Length; i++)
     {
-        if (array[i] >= 0)
+        if (array[i] > 0)
         {
             count = count +1;
         }
@@ -50,8 +46,11 @@ int QuantityNumber(int[] array)
     return count;
 };
 
-int[] userArray = ArrayL(array);
+Console.WriteLine("Введите длину массива: ");
+int length = Convert.ToInt32(Console.ReadLine());
+int [] array = new int [length];
 
+int[] userArray = MyArray(array);
 PrintArray(userArray);
 
 Console.WriteLine();
