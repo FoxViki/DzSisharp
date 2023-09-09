@@ -3,12 +3,12 @@
 
 Console.Clear();
 
-int[,] Get2DArray(int row, int col, int deviation)
+int[,] GetRandom2DArray(int rowNumber, int colNumber, int deviation)
 {
-    int[,] array = new int[row, col];
-    for (int i = 0; i < row; i++)
+    int[,] array = new int[rowNumber, colNumber];
+    for (int i = 0; i < rowMumber; i++)
     {
-        for (int j = 0; j < col; j++)
+        for (int j = 0; j < colNumber; j++)
         {
             array[i, j] = new Random().Next(-deviation, deviation);
         }
@@ -36,6 +36,3 @@ void Print2DArray(int[,] arrayToPrint)
 }
 int[,] randomArray = GetRandom2DArray(5, 5, 10);
 Print2DArray(randomArray);
-
-int [,] arr = Get2DArray(5,5,10);
-Print2DArray(arr);
