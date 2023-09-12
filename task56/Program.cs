@@ -1,7 +1,7 @@
 ﻿﻿/* Задача 56: Задайте прямоугольный двумерный массив. Напишите
-программу, которая будет находить строку с наименьшей суммой элементов. */
+программу, которая будет находить строку с наименьшей суммой элементов. 
+*/
 
-Console.Clear();
 
 int[,] Get2DArray(int row, int col, int min, int max)
 {
@@ -16,51 +16,52 @@ int[,] Get2DArray(int row, int col, int min, int max)
     return array;
 }
 
-void Print2DArray(int[,] array)
+void Print2DArray(int[,] arrayToPrint)
 {
-    System.Console.Write($"\t");
-    for (int i = 0; i < array.GetLength(1); i++)
+    Console.Write($"[ ]\t");
+    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
     {
         Console.Write($"[{i}]\t");
     }
-    System.Console.WriteLine();
-    for (int i = 0; i < array.GetLength(0); i++)
+    Console.WriteLine();
+    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
         Console.Write($"[{i}]\t");
+        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
+        {
+            Console.Write(arrayToPrint[i, j] + "\t");
+        }
+        Console.WriteLine();
+    }
+};
+
+int Summa(int[,] array, int row)
+{
+        int sum = 0;
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write(array[i, j] + "\t");
+            sum += array[row, j];
         }
-        System.Console.Write("Сумма: " + SumByRows(array, i));
-        System.Console.WriteLine();
-    }
-}
-
-int SumByRows(int[,] array, int row)    // считаем сумму всех элементов заданной строки массива
-{
-    int sum = 0;
-    for (int i = 0; i < array.GetLength(1); i++)
-    {
-        sum += array[row, i];
-    }
     return sum;
-}
+};
 
-int SmallestRowSum(int[,] array)
+int MinSumStr(int[,] array)
 {
     int row = 0;
-    int smallest = SumByRows(array, 0);
+    int minSum = Summa(array, 0);
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        if (SumByRows(array, i) < smallest)
-        {
-            row = i;
-            smallest = SumByRows(array, i);
-        }
+        if (Summa(array, i) < minSum)
+        row = i;
+        minSum = Summa(array, i);
+        Console.Write($"Сумма {row} строки: " + Summa(array, i));
+        Console.WriteLine();
     }
     return row;
 }
 
-int[,] arr = Get2DArray(5, 7, 0, 10);
-Print2DArray(arr);
-System.Console.WriteLine("Строка с наименьшей суммой элементов: " + SmallestRowSum(arr));
+int[,] userArray = Get2DArray(3, 4, 0, 10);
+Print2DArray(userArray);
+Console.WriteLine();
+Console.WriteLine($"Строка с наименьшей суммой элементов: {MinSumStr(userArray)}");
+

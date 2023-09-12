@@ -1,36 +1,69 @@
-﻿/*Составить частотный словарь элементов двумерного массива.
-Словарь содержит инфу о том, сколько раз встречается элемент входных данных*/
+﻿/*57. Составить частотный словарь элементов двумерного массива. Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+{ 1, 9, 9, 0, 2, 8, 0, 9 }
+0 встречается 2 раза
+1 встречается 1 раз
+2 встречается 1 раз
+8 встречается 1 раз
+9 встречается 3 раза
 
-int[,] Get2DArray(int rows, int cols, int min, int max)
+1, 2, 3
+4, 6, 1
+2, 1, 6
+1 встречается 3 раза
+2 встречается 2 раза
+3 встречается 1 раз
+4 встречается 1 раз
+6 встречается 2 раза
+
+*/
+
+Console.Write("Введите количество строк массива: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов массива: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[,] arr = FillMatrixRnd(m, n);
+PrintMatrix(arr);
+
+int[] expandArray = ExpandMatrix(arr);
+CollectionSort(expandArray);
+
+// Console.WriteLine($"[{String.Join(", ", expandArray)}]");
+RepeatRate(expandArray);
+
+// Заполнение массива случайными числами
+int[,] FillMatrixRnd(int row, int col)
 {
-    int[,] array = new int[rows, cols];
-    for (int i = 0; i < rows; i++)
+    int[,] matrix = new int[row, col];
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < cols; j++)
+        for (int j = 0; j < col; j++)
         {
-            array[i, j] = new Random().Next(min, max);
+            matrix[i, j] = new Random().Next(1, 10);
         }
     }
-    return array;
+    return matrix;
 }
 
-void Print2DArray(int[,] arrayToPrint)
+// Вывод двумерного массива
+void PrintMatrix(int[,] matrix)
 {
     Console.WriteLine();
-    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write($"[{i}]\t");
-        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(arrayToPrint[i, j] + "\t");
+            Console.Write($"{matrix[i, j]}\t");
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
-int[] ExpendMatrix(int[,] matrix)
+// Разворот матрицы в одномерный массив
+int[] ExpandMatrix(int[,] matrix)
 {
-    int n = matrix.GetLength(0)*matrix.GetLength(1);
+    int n = matrix.GetLength(0) * matrix.GetLength(1);
     int[] array = new int[n];
     n = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -44,14 +77,16 @@ int[] ExpendMatrix(int[,] matrix)
     return array;
 }
 
-int CollectionSort(int[] array)
+// Сортировка элементов по возрастанию
+void CollectionSort(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
         int minPosition = i;
-        for (int j = 0; j < array.Length; ji++)
+        for (int j = i + 1; j < array.Length; j++)
         {
-            if (array[j] < array[minPosition]) minPosition = j;
+            if (array[j] < array[minPosition])
+                minPosition = j;
         }
         if (i != minPosition)
         {
@@ -60,112 +95,24 @@ int CollectionSort(int[] array)
             array[minPosition] = tmp;
         }
     }
-    return array;
 }
 
-void PrintArray(int [] arrayToPrint)
+// Вывод количества повторений значения элемента массива
+void RepeatRate(int[] array)
 {
-    Console.Write("[");
-    for (int i=0; i<arrayToPrint.Length; i++)
+    int save = array[0];
+    int count = 1;
+    for (int i = 1; i < array.Length; i++)
     {
-       Console.Write(arrayToPrint[i]);
-       if (i<arrayToPrint.Length - 1)
-       {
-        Console.Write (", ");
-       }
-    }
-    Console.Write("]");
-};
-
-void Count(int[] array)
-{
-    int count = 0;
-
-    for (int i = 0; i < array.Length; i++)
-    {
-        int number = array[i];
-        for (int j = 0; j < array.Length; j++)
+        if (array[i] == save)
+            count++;
+        else
         {
-            if (number == array[j]) count ++
+            Console.WriteLine($"{save} - {count} шт");
+            save = array[i];
+            count = 1;
         }
-        Console.WriteLine($"Число {number} встречается {count} раз")
+        if (i == array.Length - 1)
+            Console.WriteLine($"{save} - {count} шт");
     }
 }
-
-
-
-int[,] user2DArray = Get2DArray(5, 5, 0, 10);
-Print2DArray(user2DArray);
-Console.WriteLine();
-int[] userAray = ExpendMatrix(user2DArray);
-PrintArray(userAray);
-int[] sortArray = CollectionSort(userAray);
-PrintArray(sortArray);
-Count(sortArray);
-
-
-
-/*
-int[,] Get2DArray(int rows, int cols, int min, int max)
-{
-    int[,] array = new int[rows, cols];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            array[i, j] = new Random().Next(min, max);
-        }
-    }
-    return array;
-}
-
-void Print2DArray(int[,] arrayToPrint)
-{
-    Console.WriteLine();
-    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
-    {
-        Console.Write($"[{i}]\t");
-        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
-        {
-            Console.Write(arrayToPrint[i, j] + "\t");
-        }
-        Console.WriteLine();
-    }
-}
-
-
-
-int[] Convert2DArrayToArray (int[,] array2DForConvert)
-{
-    int index = 0;
-    int rows = array2DForConvert.GetLength(0);
-    int cols = array2DForConvert.GetLength(1);
-    int[] array = new int[rows*cols];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            array [index] = array2DForConvert[i, j];
-            index++;
-        }
-    } return array;
-}
-void PrintFrequencyVocabulary(int[] arrayForCountNumber)
-{
-    for (int number = 0; number < 10; number++)
-    {
-        int countNumber = 0;
-        for (int i = 0; i < arrayForCountNumber.Length; i++)
-        {
-            if (number==arrayForCountNumber[i]) countNumber++;
-        }
-        if (countNumber != 0) Console.WriteLine($"Число {number} встречается {countNumber} раз")
-    }
-}
-
-int[,] user2DArray = Get2DArray(5, 5, 0, 10);
-int[] userArray = Convert2DArrayToArray(user2DArray);
-
-Print2DArray(user2DArray);
-Console.WriteLine();
-PrintFrequencyVocabulary(userArray);*/
