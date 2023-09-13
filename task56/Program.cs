@@ -65,3 +65,69 @@ Print2DArray(userArray);
 Console.WriteLine();
 Console.WriteLine($"Строка с наименьшей суммой элементов: {MinSumStr(userArray)}");
 
+
+
+
+/*
+
+Василий AsmuZ Просыпаемся сони!
+Никита Шаров Привет
+Анастасия Павлова Всем привет! Волшебного настроения!
+Никита Шаров Привет
+Анастасия Павлова Валерия, мы с Вами в одной лодке. Аллергия+простуда это очень весело.
+Анастасия Павлова Я в большой VS не разобралась вообще(((
+Никита Шаров int[,] SortDecreaseRowsInArray(int[,] arrayForSort)
+{
+bool sorted;
+
+do
+{
+sorted = false;
+for (int i = 0; i < arrayForSort.GetLength(0); i++)
+{
+for (int j = 1; j < arrayForSort.GetLength(1); j++)
+{
+if (arrayForSort[i, j - 1] < arrayForSort[i, j])
+{
+int temp = arrayForSort[i, j - 1];
+arrayForSort[i, j - 1] = arrayForSort[i, j];
+arrayForSort[i, j] = temp;
+sorted = true;
+}
+}
+}
+} while (sorted);
+
+return arrayForSort;
+}
+Никита Шаров int[] SumRowsIn2DArray(int[,] array)
+{
+int[] sumRows = new int[array.GetLength(0)];
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+for (int j = 0; j < array.GetLength(1); j++)
+{
+sumRows[i] += array[i, j];
+}
+}
+
+return sumRows;
+}
+Никита Шаров void PrintSmallestElement(int[] array)
+{
+int smallestSum = array[0];
+int rowFrom2DArray = 0; // Номер элементна будет соответствовать строке в двумерном массиве.
+
+for (int i = 1; i < array.Length; i++)
+{
+if (smallestSum > array[i])
+{
+smallestSum = array[i];
+rowFrom2DArray = i;
+}
+}
+
+Console.WriteLine($"Наименьшая сумма элементов будет в {rowFrom2DArray} строке и она равна {smallestSum}");
+}
+*/

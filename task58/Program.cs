@@ -1,8 +1,10 @@
-﻿﻿/* Задача 58: Задайте две матрицы. Напишите программу, которая будет
-находить произведение двух матриц. */
-
-
-
+﻿﻿/* Задача 58:!!!!!!!!! Задайте две матрицы. Напишите программу, которая будет
+находить произведение двух матриц. *//*
+void Proverka(int row2, int col1)
+{
+    if (row2 != col1) Console.WriteLine("Умножение недопустимо!");
+};
+*/
 int[,] Get2DArray(int row, int col, int min, int max)
 {
     int[,] array = new int[row, col];
@@ -37,21 +39,53 @@ void Print2DArray(int[,] array)
 
 int[,] Proizv(int[,] array1, int[,] array2)
 {
-    int rows = array1.GetLength(0);
-    int cols = array1.GetLength(1);
-    int[,] newArray = new int[rows, cols];
-    for (int i = 0; i < array1.GetLength(0); i++)
+    int row1 = array1.GetLength(0);
+    int row2 = array2.GetLength(0);
+    int col1 = array1.GetLength(1);
+    int col2 = array2.GetLength(1);
+    int[,] newArray = new int[row1, col2];
+    int rez = 0;
+    for (int i = 0; i < row1; i++)
     {
-        for (int j = 0; j < array1.GetLength(1); j++)
+        for (int j = 0; j < col2; j++)
         {
-            newArray[i, j] = array1[i, j] * array2[i, j];
+
+            for (int k = 0; k < col1; k ++)
+            {
+                if (row2 != col1) Console.WriteLine("Умножение недопустимо!");
+                else 
+                {
+                rez = (array1[i, k] * array2[k, j]);
+                newArray [i,j]+= rez;
+                }
+            }
         }
     }
     return newArray;
 }
 
-int[,] userArray1 = Get2DArray(5, 5, 0, 10);
-int[,] userArray2 = Get2DArray(5, 5, 0, 10);
+
+Console.WriteLine("Введите число строк м1: ");
+int row1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число столбцов м1: ");
+int col1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное число м1: ");
+int min1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимальное число м1: ");
+int max1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число строк м2: ");
+int row2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число столбцов м2: ");
+int col2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное число м2: ");
+int min2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимальное число м2: ");
+int max2 = Convert.ToInt32(Console.ReadLine());
+
+
+int[,] userArray1 = Get2DArray(row1, col1, min1, max1);
+int[,] userArray2 = Get2DArray(row2, col2, min2, max2);
 
 Console.WriteLine("Первый массив");
 Console.WriteLine();
@@ -61,14 +95,10 @@ Console.WriteLine("Второй массив");
 Console.WriteLine();
 Print2DArray(userArray2);
 Console.WriteLine();
-Proizv(userArray1, userArray2);
 Console.WriteLine("Произведение массивов");
+Console.WriteLine();
+Proizv(userArray1, userArray2);
 Print2DArray(Proizv(userArray1, userArray2));
-
-
-
-
-
 
 
 

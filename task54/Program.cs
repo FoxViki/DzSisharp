@@ -65,3 +65,31 @@ int[,] SortirVsegoArray(int[,] array)
 int[,] userArray = Get2DArray(3 ,5, 0, 10);
 Print2DArray(userArray);
 Print2DArray(SortirVsegoArray(userArray));
+
+
+
+/*
+Никита Шаров int[,] SortDecreaseRowsInArray(int[,] arrayForSort)
+{
+bool sorted;
+
+do
+{
+sorted = false;
+for (int i = 0; i < arrayForSort.GetLength(0); i++)
+{
+for (int j = 1; j < arrayForSort.GetLength(1); j++)
+{
+if (arrayForSort[i, j - 1] < arrayForSort[i, j])
+{
+int temp = arrayForSort[i, j - 1];
+arrayForSort[i, j - 1] = arrayForSort[i, j];
+arrayForSort[i, j] = temp;
+sorted = true;
+}
+}
+}
+} while (sorted);
+
+return arrayForSort;
+}*/
