@@ -1,14 +1,11 @@
 ﻿﻿/* Задача 62: Заполните спирально массив 4 на 4. или (n на n) */
 
 
-Console.Clear();
-
 System.Console.Write("Высота массива:");
 int rows = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Ширина массива:");
 int cols = Convert.ToInt32(Console.ReadLine());
 
-Console.Clear();
 
 int[,] array = Spiral(rows, cols);
 
