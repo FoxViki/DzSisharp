@@ -3,15 +3,17 @@
 N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
-Console.WriteLine("Введите начало отсчета: ");
-int start = Convert.ToIn32(Console.ReadLine());
+Console.Write("Введите число: ");
+int userNumber = Convert.ToInt32(Console.ReadLine());
 
-void NuturalNum(int finish = 1, int start)
+void NuturalNum( int number)
 {
-if (start >= finish)
-{
-Console.Write(start +", ");
-NuturalNum(finish, start - 1);
-}
-}
-NuturalNum(int start);
+    if(number != 0)
+    {
+        Console.Write(number + ", ");
+        NuturalNum(number - 1);
+    }
+};
+
+NuturalNum(userNumber);
+Console.WriteLine();
